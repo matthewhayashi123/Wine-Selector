@@ -28,10 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		664D5C9428BBC37100764AF8 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = SOURCE_ROOT; };
-		664D5C9728BBC39E00764AF8 /* PageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHelper.swift; sourceTree = SOURCE_ROOT; };
+		664D5C9428BBC37100764AF8 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MotherView.swift; path = Shared/MotherView.swift; sourceTree = SOURCE_ROOT; };
+		664D5C9728BBC39E00764AF8 /* PageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageHelper.swift; path = Shared/PageHelper.swift; sourceTree = SOURCE_ROOT; };
 		664D5C9D28BBF0A600764AF8 /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
-		664D5CA028BBF71B00764AF8 /* TertiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TertiaryView.swift; sourceTree = SOURCE_ROOT; };
+		664D5CA028BBF71B00764AF8 /* TertiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TertiaryView.swift; path = Shared/TertiaryView.swift; sourceTree = SOURCE_ROOT; };
 		664D5CA328BC095600764AF8 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		669FD33E28B8089900E4CCF5 /* Wine_SelectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine_SelectorApp.swift; sourceTree = "<group>"; };
 		669FD33F28B8089900E4CCF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,13 +82,13 @@
 				669FD33E28B8089900E4CCF5 /* Wine_SelectorApp.swift */,
 				664D5C9728BBC39E00764AF8 /* PageHelper.swift */,
 				664D5C9028BBC02A00764AF8 /* Views */,
-				66CBCC4A28BAD23B00AB10AE /* SecondaryView.swift */,
-				664D5CA028BBF71B00764AF8 /* TertiaryView.swift */,
 				664D5C9D28BBF0A600764AF8 /* StartPage.swift */,
+				664D5CA028BBF71B00764AF8 /* TertiaryView.swift */,
 				669FD33F28B8089900E4CCF5 /* ContentView.swift */,
+				66CBCC4A28BAD23B00AB10AE /* SecondaryView.swift */,
 				664D5C9428BBC37100764AF8 /* MotherView.swift */,
-				669FD34028B8089D00E4CCF5 /* Assets.xcassets */,
 				664D5CA328BC095600764AF8 /* Summary.swift */,
+				669FD34028B8089D00E4CCF5 /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
