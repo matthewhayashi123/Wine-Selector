@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "napa-california-picture-id1310665507?b=1&k=20&m=1310665507&s=170667a&w=0&h=7Ieqv5a1skVzIajfBjWuQQaGn-gN0xkOku0b1fIFS5Y=.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
