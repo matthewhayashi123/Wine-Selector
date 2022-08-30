@@ -1,6 +1,8 @@
 import Foundation
 import SwiftUI
-
+/*
+ Contains all the randomization and supporting calculations
+ */
 class ViewRouter: ObservableObject{
     
     @Published var currentPage: Page = .page0
@@ -9,6 +11,7 @@ class ViewRouter: ObservableObject{
     @Published var varietalValue: String = " "
 }
 
+//Creates own Page type
 enum Page{
     case page0
     case page1
@@ -17,16 +20,18 @@ enum Page{
     case page4
 }
 
+//Randomly selects type of wine: Red or White
 func redOrWhite() -> String{
 
     let wineTypes = [0: "Red Wine",
                      1: "White Wine"]
     
-    let type:String = wineTypes[Int.random(in: 0...1)]!
+    let type:String = wineTypes[Int.random(in: 0...1)]! // ! -> force unwrap
     
     return type
 }
 
+//Randomly selects region of wine
 func region() -> String{
 
     let wineRegion = [0: "Italy",
@@ -42,7 +47,14 @@ func region() -> String{
     return type
 }
 
-func varietal(viewRouter: ViewRouter) -> String{
+/*
+ Randomly selects varietal of wine
+ For future updates: currently only supports three varietals per region per type
+ -Randomization is only for values 0...3
+ -Needs different logic if adding additional
+ */
+ 
+ func varietal(viewRouter: ViewRouter) -> String{
     var stringType = viewRouter.typeValue
     var regionType = viewRouter.regionValue
     let randomInt = Int.random(in: 0...3)

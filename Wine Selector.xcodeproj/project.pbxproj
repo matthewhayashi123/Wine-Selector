@@ -19,8 +19,8 @@
 		664D5CA528BC095600764AF8 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D5CA328BC095600764AF8 /* Summary.swift */; };
 		669FD34E28B8089D00E4CCF5 /* Wine_SelectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FD33E28B8089900E4CCF5 /* Wine_SelectorApp.swift */; };
 		669FD34F28B8089D00E4CCF5 /* Wine_SelectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FD33E28B8089900E4CCF5 /* Wine_SelectorApp.swift */; };
-		669FD35028B8089D00E4CCF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FD33F28B8089900E4CCF5 /* ContentView.swift */; };
-		669FD35128B8089D00E4CCF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FD33F28B8089900E4CCF5 /* ContentView.swift */; };
+		669FD35028B8089D00E4CCF5 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FD33F28B8089900E4CCF5 /* FirstView.swift */; };
+		669FD35128B8089D00E4CCF5 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669FD33F28B8089900E4CCF5 /* FirstView.swift */; };
 		669FD35228B8089D00E4CCF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669FD34028B8089D00E4CCF5 /* Assets.xcassets */; };
 		669FD35328B8089D00E4CCF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669FD34028B8089D00E4CCF5 /* Assets.xcassets */; };
 		66CBCC4B28BAD23B00AB10AE /* SecondaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBCC4A28BAD23B00AB10AE /* SecondaryView.swift */; };
@@ -34,7 +34,7 @@
 		664D5CA028BBF71B00764AF8 /* TertiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TertiaryView.swift; path = Shared/TertiaryView.swift; sourceTree = SOURCE_ROOT; };
 		664D5CA328BC095600764AF8 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		669FD33E28B8089900E4CCF5 /* Wine_SelectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine_SelectorApp.swift; sourceTree = "<group>"; };
-		669FD33F28B8089900E4CCF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		669FD33F28B8089900E4CCF5 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		669FD34028B8089D00E4CCF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		669FD34528B8089D00E4CCF5 /* Wine Selector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Selector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		669FD34B28B8089D00E4CCF5 /* Wine Selector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Selector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +84,7 @@
 				664D5C9028BBC02A00764AF8 /* Views */,
 				664D5C9D28BBF0A600764AF8 /* StartPage.swift */,
 				664D5CA028BBF71B00764AF8 /* TertiaryView.swift */,
-				669FD33F28B8089900E4CCF5 /* ContentView.swift */,
+				669FD33F28B8089900E4CCF5 /* FirstView.swift */,
 				66CBCC4A28BAD23B00AB10AE /* SecondaryView.swift */,
 				664D5C9428BBC37100764AF8 /* MotherView.swift */,
 				664D5CA328BC095600764AF8 /* Summary.swift */,
@@ -208,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669FD35028B8089D00E4CCF5 /* ContentView.swift in Sources */,
+				669FD35028B8089D00E4CCF5 /* FirstView.swift in Sources */,
 				664D5C9E28BBF0A600764AF8 /* StartPage.swift in Sources */,
 				664D5C9828BBC39E00764AF8 /* PageHelper.swift in Sources */,
 				664D5CA128BBF71B00764AF8 /* TertiaryView.swift in Sources */,
@@ -223,7 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669FD35128B8089D00E4CCF5 /* ContentView.swift in Sources */,
+				669FD35128B8089D00E4CCF5 /* FirstView.swift in Sources */,
 				664D5C9F28BBF0A600764AF8 /* StartPage.swift in Sources */,
 				664D5C9928BBC39E00764AF8 /* PageHelper.swift in Sources */,
 				664D5CA228BBF71B00764AF8 /* TertiaryView.swift in Sources */,

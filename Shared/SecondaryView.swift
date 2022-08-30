@@ -17,7 +17,7 @@ struct SecondaryView: View {
                 HStack{
                    
                     
-                   // if hiddenButton2 == false{
+                   // Always show return button going forward
                         Button(action: {
                             
                             viewRouter.currentPage = .page1
@@ -28,9 +28,9 @@ struct SecondaryView: View {
                             Text("StartOver")
                                 .foregroundColor(.black)
                         })
-                        .padding(.leading, 250.0)
+                        .padding(.leading, 250.0) //Places return button on right side of screen
                     
-                   // }
+
                 }
                 
                 Text("Wine Region")
