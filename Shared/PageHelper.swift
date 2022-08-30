@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 /*
  Contains all the randomization and supporting calculations
+ https://blckbirds.com/post/how-to-navigate-between-views-in-swiftui-by-using-an-observableobject/
  */
 class ViewRouter: ObservableObject{
     
