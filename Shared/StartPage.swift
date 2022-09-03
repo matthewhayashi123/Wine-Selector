@@ -2,7 +2,7 @@ import SwiftUI
 
 struct StartPage: View {
 
-    @StateObject var viewRouter: ViewRouter
+    @StateObject var viewRouter: StateKeeper
     
     var body: some View {
                 ZStack {
@@ -16,7 +16,7 @@ struct StartPage: View {
                             .frame(width: 300)
                             .foregroundColor(.white)
                         Button(action: {
-                            viewRouter.currentPage = .page1
+                            viewRouter.currentPage = .page2
                         }, label: {
                             Text("Let's Begin")
                                 .foregroundColor(.white)
@@ -35,6 +35,6 @@ struct StartPage: View {
 
 struct StartPage_Previews: PreviewProvider {
     static var previews: some View {
-        StartPage(viewRouter:ViewRouter())
+        StartPage(viewRouter:StateKeeper())
     }
 }

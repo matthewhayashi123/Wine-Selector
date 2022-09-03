@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct Summary: View {
-    
+    var wines = loadCSV(from:"Wines")
     @State var region1 = " "
-    @StateObject var viewRouter: ViewRouter
+    @StateObject var viewRouter: StateKeeper
+    
     
     var body: some View {
+        var index = filterWines(wines: wines, varietal: viewRouter.varietalValue, region: viewRouter.regionValue)
         ZStack {
             Image("background_red")
                 .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
@@ -46,7 +48,7 @@ struct Summary: View {
                         Button(action: {
                             
                             viewRouter.currentPage = .page1
-                            
+
                         }, label: {
                             Image(systemName: "return")
                                 .foregroundColor(.black)
@@ -57,6 +59,8 @@ struct Summary: View {
                         .background(Color("Maroon"))
                         .cornerRadius(15)
                 
+                Text("Here is a suggestion: \n" + wines[index].title)
+                    .font(.footnote)
                 Spacer()
                 
             }
@@ -67,7 +71,7 @@ struct Summary: View {
 
 struct Summary_Previews: PreviewProvider {
     static var previews: some View {
-        Summary(viewRouter:ViewRouter())
+        Summary(viewRouter:StateKeeper())
     }
 }
 

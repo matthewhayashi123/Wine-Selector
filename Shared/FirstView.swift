@@ -3,7 +3,7 @@ import SwiftUI
 struct FirstView: View {
     @State var redOrWhiteRandom = " "
     @State var hiddenButton1 = true
-    @StateObject var viewRouter: ViewRouter
+    @StateObject var stateKeeper: StateKeeper
     
     var body: some View {
                 ZStack {
@@ -77,8 +77,8 @@ struct FirstView: View {
                         //Allows for redraw
                         if hiddenButton1 == false{
                         Button(action: {
-                            viewRouter.currentPage = .page2
-                            viewRouter.typeValue = redOrWhiteRandom
+                            stateKeeper.currentPage = .page2
+                            stateKeeper.typeValue = redOrWhiteRandom
                         }, label: {
                             Text("Next: Choose a Region")
                                 .foregroundColor(.white)
@@ -98,6 +98,6 @@ struct FirstView: View {
 
 struct FirstView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstView(viewRouter:ViewRouter())
+        FirstView(stateKeeper:StateKeeper())
     }
 }

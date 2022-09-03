@@ -7,11 +7,11 @@ struct Wine_SelectorApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     //Used to pass results of randomization between pages -> summary page
-    @StateObject var viewRouter = ViewRouter()
+    @StateObject var viewRouter = StateKeeper()
     
     var body: some Scene {
         WindowGroup {
-            MotherView(viewRouter: viewRouter)
+            MotherView(stateKeeper: viewRouter)
         }
     }
 }

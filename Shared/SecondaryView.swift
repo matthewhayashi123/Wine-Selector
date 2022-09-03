@@ -4,7 +4,7 @@ struct SecondaryView: View {
     
     @State var hiddenButton2 = true
     @State var region1 = " "
-    @StateObject var viewRouter: ViewRouter
+    @StateObject var stateKeeper: StateKeeper
     
     var body: some View {
         ZStack {
@@ -20,7 +20,7 @@ struct SecondaryView: View {
                    // Always show return button going forward
                         Button(action: {
                             
-                            viewRouter.currentPage = .page1
+                            stateKeeper.currentPage = .page2
                             
                         }, label: {
                             Image(systemName: "return")
@@ -38,19 +38,19 @@ struct SecondaryView: View {
                     .fontWeight(.heavy)
                     .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
                 
-                Image(region1)
+                Image(stateKeeper.regionValue)
                     .resizable()
                     .frame(width: 300.0, height: 300.0)
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                 
-                Text(region1)
+                Text(stateKeeper.regionValue)
                     .font(.title)
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
                     .frame(width: 300.0, height: 50.0)
    
                 Button(action: {
-                    region1 = region()
+                    stateKeeper.region()
                     hiddenButton2 = false
                 }, label: {
                     if hiddenButton2 == true{
@@ -67,8 +67,8 @@ struct SecondaryView: View {
                 
                 if hiddenButton2 == false{
                 Button(action: {
-                    viewRouter.currentPage = .page3
-                    viewRouter.regionValue = region1
+                    stateKeeper.currentPage = .page3
+
                 }, label: {
                     Text("Next: Choose a Varietal")
                         .foregroundColor(.white)
@@ -88,6 +88,6 @@ struct SecondaryView: View {
 
 struct SecondaryView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondaryView(viewRouter:ViewRouter())
+        SecondaryView(stateKeeper:StateKeeper())
     }
 }

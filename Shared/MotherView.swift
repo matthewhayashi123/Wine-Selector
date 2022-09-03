@@ -2,23 +2,23 @@ import SwiftUI
 
 struct MotherView: View {
     
-    @StateObject var viewRouter: ViewRouter
+    @StateObject var stateKeeper: StateKeeper
 
     
     var body: some View {
         
         //Works with @StateObject to pass page references through views
-        switch viewRouter.currentPage{
+        switch stateKeeper.currentPage{
         case .page0:
-            StartPage(viewRouter: viewRouter)
+            StartPage(viewRouter: stateKeeper)
         case .page1:
-            FirstView(viewRouter: viewRouter)
+            FirstView(stateKeeper: stateKeeper)
         case .page2:
-            SecondaryView(viewRouter: viewRouter)
+            SecondaryView(stateKeeper: stateKeeper)
         case .page3:
-            TertiaryView(viewRouter: viewRouter)
+            TertiaryView(viewRouter: stateKeeper)
         case .page4:
-            Summary(viewRouter: viewRouter)
+            Summary(viewRouter: stateKeeper)
         }
         
         
@@ -28,6 +28,6 @@ struct MotherView: View {
 
 struct MotherView_Previews: PreviewProvider {
     static var previews: some View {
-        MotherView(viewRouter: ViewRouter())
+        MotherView(stateKeeper: StateKeeper())
     }
 }

@@ -4,12 +4,28 @@ import SwiftUI
  Contains all the randomization and supporting calculations
  https://blckbirds.com/post/how-to-navigate-between-views-in-swiftui-by-using-an-observableobject/
  */
-class ViewRouter: ObservableObject{
-    
+class StateKeeper: ObservableObject{
     @Published var currentPage: Page = .page0
     @Published var regionValue: String = " "
     @Published var typeValue:  String = " "
     @Published var varietalValue: String = " "
+    
+    var randomInt: Int
+    var wines: [Wine]
+    init(){
+        
+        wines = loadCSV(from:"Wines")
+        let lenWines = wines.count
+        randomInt = Int.random(in: 0...lenWines)
+    }
+    func region() -> Void{
+        self.regionValue = wines[self.randomInt].country
+    }
+    
+    func varietal() -> Void{
+        self.varietalValue = wines[self.randomInt].variety
+    }
+    
 }
 
 //Creates own Page type
@@ -55,7 +71,7 @@ func region() -> String{
  -Needs different logic if adding additional
  */
  
- func varietal(viewRouter: ViewRouter) -> String{
+ func varietal(viewRouter: StateKeeper) -> String{
     var stringType = viewRouter.typeValue
     var regionType = viewRouter.regionValue
     let randomInt = Int.random(in: 0...3)
@@ -157,4 +173,20 @@ func region() -> String{
             return " "
         }
     }
+}
+
+//Function to filter data
+func filterWines(wines: [Wine], varietal: String, region: String)-> Int {
+    
+    var i = 0
+    for wine in wines{
+        if wine.variety == varietal && wine.country == region{
+            return i
+        }else {
+            i = i+1
+        }
+        
+        
+    }
+    return -1
 }

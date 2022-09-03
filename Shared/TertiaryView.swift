@@ -5,7 +5,7 @@ struct TertiaryView: View {
     @State var hiddenButton3 = true
     @State var varietal1 = " "
     @State var RandomPic = " "
-    @StateObject var viewRouter: ViewRouter
+    @StateObject var viewRouter: StateKeeper
     
     var body: some View {
         ZStack {
@@ -90,6 +90,6 @@ struct TertiaryView: View {
 
 struct TertiaryView_Previews: PreviewProvider {
     static var previews: some View {
-        TertiaryView(viewRouter:ViewRouter())
+        TertiaryView(viewRouter:StateKeeper())
     }
 }
